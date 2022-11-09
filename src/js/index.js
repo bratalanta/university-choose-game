@@ -1,4 +1,4 @@
-import {AppRoute, Complexity, StartFeatures, StorageField} from './const.js'
+import {AppRoute, Complexity, DEFAULT_THEME, StartFeatures, StorageField} from './const.js'
 import {getCurrentUserData, redirect, setTheme} from './common.js'
 import ThemeImage from '../img/game/themes/*.jpg';
 
@@ -13,7 +13,7 @@ const ComplexityColor = {
     [Complexity.Hard]: 'red',
 }
 
-setTheme(chosenTheme)
+setTheme(chosenTheme ? chosenTheme : DEFAULT_THEME)
 
 let isInputValid = false
 
@@ -70,13 +70,13 @@ const enterGameInput = document.querySelector('.enter-game__input')
 enterGameInput.addEventListener('input', handleInputChange)
 
 const themeSelector = document.querySelector('#theme')
-themeSelector.value = chosenTheme ? chosenTheme : themeSelector.value
+themeSelector.value = chosenTheme ? chosenTheme : DEFAULT_THEME
 themeSelector.addEventListener('change', handleThemeChange)
 
 const rulesLink = document.querySelector('.rules__link')
 rulesLink.addEventListener('click', (evt) => redirect(evt, AppRoute.Rules))
 
 const complexitySelector = document.querySelector('#complexity')
-complexitySelector.value = complexity ? complexity : complexitySelector.value
+complexitySelector.value = complexity ? complexity : Complexity.Easy
 complexitySelector.style.color = ComplexityColor[complexitySelector.value]
 complexitySelector.addEventListener('change', handleComplexityColorChange)

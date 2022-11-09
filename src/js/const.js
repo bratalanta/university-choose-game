@@ -103,3 +103,4 @@ export const LevelData = {
 }
 
 export const NEXT_LEVEL_TRANSITION_TIME = 2000
+export const DEFAULT_THEME = 'field'
