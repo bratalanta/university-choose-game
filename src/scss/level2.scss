@@ -1,0 +1,35 @@
+$img-size: 70px;
+
+.main {
+
+    &__content {
+    }
+}
+
+.content-full {
+    padding: 0;
+    position: relative;
+
+    & > * {
+        margin: 0;
+    }
+
+    img {
+        width: $img-size;
+        height: $img-size;
+        position: absolute;
+    }
+
+    &__stick {
+        width: 3px;
+        position: absolute;
+        left: 50%;
+        height: 100%;
+
+        background-color: black;
+    }
+}
+
+.header-level-2 {
+    font-size: 36px;
+}

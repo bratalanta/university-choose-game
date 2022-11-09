@@ -1,0 +1,26 @@
+.btn {
+    color: whitesmoke;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 40px;
+    font-size: 24px;
+    background-color: gold;
+    border-radius: 5px;
+    border: 1px solid purple;
+    transition: all 0.2s;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.bg {
+    background: url('/img/field.jpg') no-repeat center;
+}
+
+.pnt {
+    font-size: 32px;
+
+}
