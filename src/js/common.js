@@ -1,4 +1,4 @@
-import { AppRoute, ComplexityExtraPointsFactor, LevelData, NEXT_LEVEL_TRANSITION_TIME, StartFeatures, StorageField } from "./const.js"
+import { AppRoute, ComplexityExtraPointsFactor, DEFAULT_THEME, LevelData, NEXT_LEVEL_TRANSITION_TIME, StartFeatures, StorageField } from "./const.js"
 import HeartImage from '../img/game/hearts/*.png';
 import ThemeImage from '../img/game/themes/*.jpg';
 

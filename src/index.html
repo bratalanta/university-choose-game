@@ -17,10 +17,17 @@
         <main class="main">
             <div class="main__container container bg">
                 <div class="main__content">
-                    <div class="main__enter-game enter-game">
+                    <div class="main__enter-game enter-game login hidden">
                         <label class="enter-game__label" for="name">Как тебя зовут?</label>
                         <input type="text" class="enter-game__input" id="name" placeholder="Меня зовут.." maxlength="15"/>
                         <div class="enter-game__error">Введите имя без пробелов</div>
+                        <a class="enter-game__link btn" href="level1.html">Играть!</a>
+                    </div>
+                    <div class="main__enter-game enter-game logout">
+                        <div class="enter-game__logged">
+                            <div class="enter-game__welcome">Привет, <span class="enter-game__username">Игрок</span>!</div>
+                            <button class="enter-game__unlog"></button>
+                        </div>
                         <a class="enter-game__link btn" href="level1.html">Играть!</a>
                     </div>
                     <div class="main__rules rules">

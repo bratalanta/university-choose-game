@@ -4,7 +4,8 @@ import ThemeImage from '../img/game/themes/*.jpg';
 
 const {
     theme: chosenTheme,
-    complexity
+    complexity,
+    name
 } = getCurrentUserData()
 
 const ComplexityColor = {
@@ -15,6 +16,13 @@ const ComplexityColor = {
 
 setTheme(chosenTheme ? chosenTheme : DEFAULT_THEME)
 
+if (name) {
+    document.querySelector('.enter-game__username').innerText = name
+} else {
+    document.querySelector('.logout').classList.add('hidden')
+    document.querySelector('.login').classList.remove('hidden')
+}
+
 let isInputValid = false
 
 const handleThemeChange = ({target}) => {
@@ -22,10 +30,10 @@ const handleThemeChange = ({target}) => {
     localStorage.setItem(StorageField.Theme, target.value)
 }
 
-const handleInputChange = (evt) => {
+const handleInputChange = ({target}) => {
     const error = document.querySelector('.enter-game__error')
 
-    if (evt.target.value && !evt.target.value.includes(' ')) {
+    if (target.value && !target.value.includes(' ')) {
         error.classList.remove('active')
         isInputValid = true
     } else {
