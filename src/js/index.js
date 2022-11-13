@@ -84,7 +84,6 @@ const handleLogoutButtonClick = () => {
 
 const startButton = document.querySelector('.main__play-link')
 startButton.addEventListener('click', handleStartButtonClick)
-console.log(startButton)
 
 const enterGameInput = document.querySelector('.enter-game__input')
 enterGameInput.addEventListener('input', handleInputChange)
@@ -101,5 +100,5 @@ complexitySelector.value = complexity ? complexity : Complexity.Easy
 complexitySelector.style.color = ComplexityColor[complexitySelector.value]
 complexitySelector.addEventListener('change', handleComplexityColorChange)
 
-const logoutButton = document.querySelector('.logout')
+const logoutButton = document.querySelector('.enter-game__unlog')
 logoutButton.addEventListener('click', handleLogoutButtonClick)

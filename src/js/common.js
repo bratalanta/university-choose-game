@@ -122,7 +122,7 @@ export const startLevel = () => {
     const errorPoints = document.querySelector('.error-points__number')
     const backToHomeLink = document.querySelector('.menu__item-link')
     const heartsList = document.querySelector('.hearts')
-    console.log(heartsList, heartsCount)
+
     for (let i = 0; i < StartFeatures.HeartsCount - heartsCount; i++) {
         if (heartsCount === StartFeatures.HeartsCount) {
             break

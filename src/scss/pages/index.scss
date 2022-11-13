@@ -57,17 +57,18 @@
         display: flex;
         align-items: center;
         flex-direction: column;
+        height: 100px;
 
         & > *:not(:last-child) {
             margin-bottom: 20px;
         }
     }
+}
 
-    &__rules {
-    }
-
-    &__options {
-    }
+.logout {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 .enter-game {
@@ -91,7 +92,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 300px;
+        width: 100%;
     }
 
     &__unlog {
