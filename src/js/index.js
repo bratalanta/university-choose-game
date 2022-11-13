@@ -57,7 +57,7 @@ const handleStartButtonClick = (evt) => {
     }
 
     const {
-        name: userName
+        name: userName,
     } = getCurrentUserData()
 
     const inputName = document.querySelector('.enter-game__input').value
