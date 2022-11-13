@@ -15,15 +15,15 @@ const ComplexityColor = {
 }
 
 setTheme(chosenTheme ? chosenTheme : DEFAULT_THEME)
+let isInputValid = false
 
 if (name) {
     document.querySelector('.enter-game__username').innerText = name
+    isInputValid = true
 } else {
     document.querySelector('.logout').classList.add('hidden')
     document.querySelector('.login').classList.remove('hidden')
 }
-
-let isInputValid = false
 
 const handleThemeChange = ({target}) => {
     document.querySelector('.bg').style.background = `url(${ThemeImage[target.value]}) no-repeat center`
@@ -56,11 +56,15 @@ const handleStartButtonClick = (evt) => {
         return
     }
 
-    const name = document.querySelector('.enter-game__input').value
+    const {
+        name: userName
+    } = getCurrentUserData()
+
+    const inputName = document.querySelector('.enter-game__input').value
     const theme = document.querySelector('#theme').value
 	const complexity = document.querySelector('#complexity').value
 
-    localStorage.setItem(StorageField.Name, name);
+    localStorage.setItem(StorageField.Name, inputName ? inputName : userName);
 	localStorage.setItem(StorageField.Theme, theme);
 	localStorage.setItem(StorageField.Complexity, complexity);
 	localStorage.setItem(StorageField.Lvl, StartFeatures.Level);
@@ -71,8 +75,16 @@ const handleStartButtonClick = (evt) => {
 	location.replace(AppRoute.Level1)
 }
 
-const startButton = document.querySelector('.enter-game__link')
+const handleLogoutButtonClick = () => {
+    localStorage.removeItem(StorageField.Name)
+    document.querySelector('.logout').classList.add('hidden')
+    document.querySelector('.login').classList.remove('hidden')
+    isInputValid = false
+}
+
+const startButton = document.querySelector('.main__play-link')
 startButton.addEventListener('click', handleStartButtonClick)
+console.log(startButton)
 
 const enterGameInput = document.querySelector('.enter-game__input')
 enterGameInput.addEventListener('input', handleInputChange)
@@ -88,3 +100,6 @@ const complexitySelector = document.querySelector('#complexity')
 complexitySelector.value = complexity ? complexity : Complexity.Easy
 complexitySelector.style.color = ComplexityColor[complexitySelector.value]
 complexitySelector.addEventListener('change', handleComplexityColorChange)
+
+const logoutButton = document.querySelector('.logout')
+logoutButton.addEventListener('click', handleLogoutButtonClick)
