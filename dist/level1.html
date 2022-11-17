@@ -1,65 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.23936ede.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.e83cba7f.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.1dde46bb.png">
-        <link rel="manifest" href="/img\site.webmanifest">
-        <link rel="stylesheet" href="/styles.5c8f3eab.css">
-        <title>Уровень 1</title>
-    </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.23936ede.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.e83cba7f.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.1dde46bb.png">
+  <link rel="manifest" href="/img\site.webmanifest">
+  <link rel="stylesheet" href="/styles.5c8f3eab.css">
+  <title>Уровень 1</title>
+</head>
+
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="header__container container">
-                <div class="header__hearts hearts">
-                    <img src="/red_heart.dfcf9ddc.png" alt="" class="hearts__img">
-                    <img src="/red_heart.dfcf9ddc.png" alt="" class="hearts__img">
-                    <img src="/red_heart.dfcf9ddc.png" alt="" class="hearts__img">
-                </div>
-                <h1 class="header__text header-level-1">Игра "Выбери нужное"</h1>
-                <div class="header__timer">00:00</div>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__hearts hearts">
+          <img src="/red_heart.dfcf9ddc.png" alt="" class="hearts__img">
+          <img src="/red_heart.dfcf9ddc.png" alt="" class="hearts__img">
+          <img src="/red_heart.dfcf9ddc.png" alt="" class="hearts__img">
+        </div>
+        <h1 class="header__text header-level-1">Игра "Выбери нужное"</h1>
+        <div class="header__timer">00:00</div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__container container bg">
+        <aside class="main__level-info level-info">
+          <div class="level-info__body">
+            <div class="level-info__content">
+              <div class="level-info__player-name">Имя игрока</div>
+              <div class="level-info__player-points player-points">ОЧКИ: <span class="player-points__number pnt">0</span></div>
+              <div class="level-info__win-points win-points">ПОБЕДА: <span class="win-points__number pnt">0</span></div>
+              <div class="level-info__error-points error-points">ОШИБКА: <span class="error-points__number pnt">0</span>
+              </div>
             </div>
-        </header>
-        <main class="main">
-            <div class="main__container container bg">
-                <aside class="main__level-info level-info">
-                    <div class="level-info__body">
-                        <div class="level-info__content">
-                            <div class="level-info__player-name">Имя игрока</div>
-                            <div class="level-info__player-points player-points">ОЧКИ: <span class="player-points__number pnt">0</span></div>
-                            <div class="level-info__win-points win-points">ПОБЕДА: <span class="win-points__number pnt">0</span></div>
-                            <div class="level-info__error-points error-points">ОШИБКА: <span class="error-points__number pnt">0</span></div>
-                        </div>
-                        <nav class="level-info__menu menu">
-                            <ul class="menu__list">
-                                <li class="menu__item">
-                                    <a href="/index.html" class="menu__item-link btn">В главное меню</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
-                </aside>
-                <div class="main__content">
-                    <div class="main__numbers-list numbers-list">
-                    </div>
-                </div>
-            </div>
-        </main>
-        <footer class="footer">
-            <div class="footer__container container">
-                <a href="https://vk.com/bratalanta" target="_blank" class="footer__author">by Matvei Denisov</a>
-                <button class="footer__check btn" type="button">Проверить</button>
-            </div>
-        </footer>
-    </div>
-    <div class="modal hidden">
-        <div class="modal__text">Правильно!</div>
-        <div class="modal__extra-points extra-points">Бонусные очки: <span class="extra-points__number">0</span>!</div>
-    </div>
-    <script src="/level1.2de3fbfb.js"></script>
+            <nav class="level-info__menu menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="/index.html" class="menu__item-link btn">В главное меню</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </aside>
+        <div class="main__content">
+          <div class="main__numbers-list numbers-list">
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <a href="https://vk.com/bratalanta" target="_blank" class="footer__author">by Matvei Denisov</a>
+        <button class="footer__check btn" type="button">Проверить</button>
+      </div>
+    </footer>
+  </div>
+  <div class="modal hidden">
+    <div class="modal__text">Правильно!</div>
+    <div class="modal__extra-points extra-points">Бонусные очки: <span class="extra-points__number">0</span>!</div>
+  </div>
+  <script src="/level1.2de3fbfb.js"></script>
 </body>
+
 </html>

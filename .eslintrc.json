@@ -3,7 +3,7 @@
         "browser": true,
         "es2021": true
     },
-    "extends": "eslint:recommended",
+    "extends": "airbnb",
     "overrides": [
     ],
     "parserOptions": {
@@ -11,5 +11,14 @@
         "sourceType": "module"
     },
     "rules": {
+      "import/no-unresolved": "off",
+      "no-loop-func": "off"
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": ["./"]
+        }
+      }
     }
 }

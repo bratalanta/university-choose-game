@@ -1,29 +1,29 @@
 $img-size: 70px;
 
 .content-full {
-    padding: 0;
-    position: relative;
+  padding: 0;
+  position: relative;
 
-    & > * {
-        margin: 0;
-    }
+  & > * {
+    margin: 0;
+  }
 
-    img {
-        width: $img-size;
-        height: $img-size;
-        position: absolute;
-    }
+  img {
+    width: $img-size;
+    height: $img-size;
+    position: absolute;
+  }
 
-    &__stick {
-        width: 3px;
-        position: absolute;
-        left: 50%;
-        height: 100%;
+  &__stick {
+    width: 3px;
+    position: absolute;
+    left: 50%;
+    height: 100%;
 
-        background-color: black;
-    }
+    background-color: black;
+  }
 }
 
 .header-level-2 {
-    font-size: 36px;
+  font-size: 36px;
 }

@@ -1,68 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.23936ede.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.e83cba7f.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.1dde46bb.png">
-        <link rel="manifest" href="/img\site.webmanifest">
-        <link rel="stylesheet" href="/styles.5c8f3eab.css">
-        <title>Главная</title>
-    <script src="/styles.5c8f3eab.js"></script></head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.23936ede.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.e83cba7f.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.1dde46bb.png">
+  <link rel="manifest" href="/img\site.webmanifest">
+  <link rel="stylesheet" href="/styles.5c8f3eab.css">
+  <title>Главная</title>
+<script src="/styles.5c8f3eab.js"></script></head>
+
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="header__container container">
-                <h1 class="header__text">Игра "Выбери нужное"</h1>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container container">
+        <h1 class="header__text">Игра "Выбери нужное"</h1>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__container container bg">
+        <div class="main__content">
+          <div class="main__enter-game enter-game login hidden">
+            <label class="enter-game__label" for="name">Как тебя зовут?</label>
+            <input type="text" class="enter-game__input" id="name" placeholder="Меня зовут.." maxlength="10">
+            <div class="enter-game__error">Введите имя без пробелов</div>
+          </div>
+          <div class="main__enter-game enter-game logout">
+            <div class="enter-game__logged">
+              <div class="enter-game__welcome">Привет, <span class="enter-game__username">Игрок</span>!</div>
+              <button class="enter-game__unlog"></button>
             </div>
-        </header>
-        <main class="main">
-            <div class="main__container container bg">
-                <div class="main__content">
-                    <div class="main__enter-game enter-game login hidden">
-                        <label class="enter-game__label" for="name">Как тебя зовут?</label>
-                        <input type="text" class="enter-game__input" id="name" placeholder="Меня зовут.." maxlength="10">
-                        <div class="enter-game__error">Введите имя без пробелов</div>
-                    </div>
-                    <div class="main__enter-game enter-game logout">
-                        <div class="enter-game__logged">
-                            <div class="enter-game__welcome">Привет, <span class="enter-game__username">Игрок</span>!</div>
-                            <button class="enter-game__unlog"></button>
-                        </div>
-                    </div>
-                    <a class="main__play-link btn" href="/level1.html">Играть!</a>
-                    <div class="main__rules rules">
-                        <a class="rules__link btn" href="/rules.html">Правила</a>
-                    </div>
-                    <div class="main__options options">
-                        <div class="options__item item-option">
-                            <label for="complexity" class="item-option__label">Уровень сложности:</label>
-                            <select class="item-option__select select-complexity" id="complexity">
-                                <option selected="" value="easy">Легко</option>
-                                <option value="medium">Нормально</option>
-                                <option value="hard">Сложно</option>
-                            </select>
-                        </div>
-                        <div class="options__item item-option">
-                            <label for="theme" class="item-option__label">Тема:</label>
-                            <select class="item-option__select" id="theme">
-                                <option selected="" value="field">Поле</option>
-                                <option value="sea">Море</option>
-                                <option value="valley">Долина</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
+          </div>
+          <a class="main__play-link btn" href="/level1.html">Играть!</a>
+          <div class="main__rules rules">
+            <a class="rules__link btn" href="/rules.html">Правила</a>
+          </div>
+          <div class="main__options options">
+            <div class="options__item item-option">
+              <label for="complexity" class="item-option__label">Уровень сложности:</label>
+              <select class="item-option__select select-complexity" id="complexity">
+                <option selected="" value="easy">Легко</option>
+                <option value="medium">Нормально</option>
+                <option value="hard">Сложно</option>
+              </select>
             </div>
-        </main>
-        <footer class="footer">
-            <div class="footer__container container">
-                <a href="https://vk.com/bratalanta" class="footer__author">by Matvei Denisov</a>
+            <div class="options__item item-option">
+              <label for="theme" class="item-option__label">Тема:</label>
+              <select class="item-option__select" id="theme">
+                <option selected="" value="field">Поле</option>
+                <option value="sea">Море</option>
+                <option value="valley">Долина</option>
+              </select>
             </div>
-        </footer>
-    </div>
-    <script src="/js.00a46daa.js" type="module"></script>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <a href="https://vk.com/bratalanta" class="footer__author">by Matvei Denisov</a>
+      </div>
+    </footer>
+  </div>
+  <script src="/js.00a46daa.js" type="module"></script>
 </body>
+
 </html>

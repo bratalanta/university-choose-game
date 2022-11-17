@@ -1,15 +1,17 @@
 export const getShuffledArray = (array) => {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
-    }
+  const arr = [...array];
 
-    return array
-}
+  for (let i = array.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+
+  return arr;
+};
 
 export const getRandomInt = (min, max) => {
-    min = Math.ceil(min);
-    max = Math.floor(max);
+  const minInt = Math.ceil(min);
+  const maxInt = Math.floor(max);
 
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+  return Math.floor(Math.random() * (maxInt - minInt + 1)) + minInt;
+};

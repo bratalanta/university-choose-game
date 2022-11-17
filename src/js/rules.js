@@ -1,11 +1,11 @@
-import {getCurrentUserData, redirect, setTheme} from './common.js'
-import { AppRoute } from './const.js'
+import { getCurrentUserData, redirect, setTheme } from './common';
+import { AppRoute } from './const';
 
 const {
-    theme
-} = getCurrentUserData()
-console.log(theme)
-setTheme(theme)
+  theme,
+} = getCurrentUserData();
 
-const backToHomeLink = document.querySelector('.rules__back-link')
-backToHomeLink.addEventListener('click', (evt) => redirect(evt, AppRoute.Home))
+setTheme(theme);
+
+const backToHomeLink = document.querySelector('.rules__back-link');
+backToHomeLink.addEventListener('click', (evt) => redirect(evt, AppRoute.Home));

@@ -1,102 +1,101 @@
 .content-level-3 {
-    padding: 0;
+  padding: 0;
 
-    & > * {
-        margin: 0;
-    }
+  & > * {
+    margin: 0;
+  }
 
-    &__pictures {
-        position: relative;
-        height: 100%;
-        width: 100%;
-    }
+  &__pictures {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
 }
 .pictures {
+  & > * {
+    position: absolute;
+  }
 
-    & > * {
-        position: absolute;
+  &__static {
+    max-width: 150px;
+
+    &.grass-1 {
+      bottom: 50px;
+      left: 0;
+      max-width: 400px;
     }
 
-    &__static {
-        max-width: 150px;
-
-        &.grass-1 {
-            bottom: 50px;
-            left: 0;
-            max-width: 400px;
-        }
-
-        &.grass-2 {
-            bottom: 50px;
-            right: 200px;
-            max-width: 405px;
-        }
-
-        &.grass-3 {
-            bottom: 50px;
-            right: 0;
-            overflow: hidden;
-            max-width: 405px;
-        }
-
-        &.edgar {
-            bottom: 5%;
-            left: 35%;
-            z-index: 2;
-            max-width: 200px;
-        }
-
-        &.primo {
-            z-index: 2;
-            bottom: 5%;
-            right: 20%;
-        }
-
-        &.nani {
-            z-index: 2;
-            bottom: 5%;
-            left: 7%;
-        }
-
-        &.tree {
-            z-index: 2;
-            bottom: 5%;
-            max-width: 400px;
-        }
-
-        &.cloud-1 {
-            left: 60%;
-            top: 5%;
-        }
-
-        &.cloud-2 {
-            left: 40%;
-            top: 8%;
-        }
-
-        &.sun {
-            right: 0;
-        }
+    &.grass-2 {
+      bottom: 50px;
+      right: 200px;
+      max-width: 405px;
     }
 
-    &__ground {
-        position: absolute;
-        bottom: 0;
-
-        width: 100%;
-        background-color: #f4a460;
-        height: 52px;
+    &.grass-3 {
+      bottom: 50px;
+      right: 0;
+      overflow: hidden;
+      max-width: 405px;
     }
 
-    &__food {
-        max-width: 40px;
-
-        z-index: 5;
-
-        filter: grayscale(100%);
-
-        &.chosen {
-            filter: grayscale(0%);
-        }
+    &.edgar {
+      bottom: 5%;
+      left: 35%;
+      z-index: 2;
+      max-width: 200px;
     }
+
+    &.primo {
+      z-index: 2;
+      bottom: 5%;
+      right: 20%;
+    }
+
+    &.nani {
+      z-index: 2;
+      bottom: 5%;
+      left: 7%;
+    }
+
+    &.tree {
+      z-index: 2;
+      bottom: 5%;
+      max-width: 400px;
+    }
+
+    &.cloud-1 {
+      left: 60%;
+      top: 5%;
+    }
+
+    &.cloud-2 {
+      left: 40%;
+      top: 8%;
+    }
+
+    &.sun {
+      right: 0;
+    }
+  }
+
+  &__ground {
+    position: absolute;
+    bottom: 0;
+
+    width: 100%;
+    background-color: #f4a460;
+    height: 52px;
+  }
+
+  &__food {
+    max-width: 40px;
+
+    z-index: 5;
+
+    filter: grayscale(100%);
+
+    &.chosen {
+      filter: grayscale(0%);
+    }
+  }
 }
