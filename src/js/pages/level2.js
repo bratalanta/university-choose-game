@@ -1,11 +1,10 @@
-import {
-  getCurrentUserData, startLevel, reduceHeartsCount, goNextLevel, reducePoints,
-} from './common';
-import { AppRoute, Complexity } from './const';
-import { getRandomInt, getShuffledArray } from './functions';
-import Level2Image from '../img/level2/*.png';
+import { AppRoute, Complexity } from '../const';
+import { getRandomInt, getShuffledArray } from '../common';
+import Level2Image from '../../img/level2/*.png';
+import getCurrentUserData from '../store';
+import Game from '../game';
 
-startLevel();
+Game.startLevel();
 const {
   complexity,
 } = getCurrentUserData();
@@ -107,11 +106,11 @@ checkBtn.addEventListener('click', () => {
         && rightSide.every((el) => el === rightSide[0]);
 
   if (areElementsDividedCorrectly) {
-    goNextLevel(AppRoute.Level3);
+    Game.goNextLevel(AppRoute.Level3);
 
     return;
   }
 
-  reduceHeartsCount();
-  reducePoints();
+  Game.reduceHeartsCount();
+  Game.reducePoints();
 });

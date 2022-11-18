@@ -1,12 +1,10 @@
-import {
-  getCurrentUserData, goNextLevel, reduceHeartsCount, reducePoints, startLevel,
-} from './common';
-import { AppRoute, Complexity } from './const';
-import { getRandomInt, getShuffledArray } from './functions';
-import Level3Image from '../img/level3/choose/*.png';
+import { AppRoute, Complexity } from '../const';
+import { getRandomInt, getShuffledArray } from '../common';
+import Level3Image from '../../img/level3/choose/*.png';
+import Game from '../game';
+import getCurrentUserData from '../store';
 
-startLevel();
-
+Game.startLevel();
 const {
   complexity,
 } = getCurrentUserData();
@@ -80,11 +78,11 @@ checkBtn.addEventListener('click', () => {
     });
 
   if (chosenPictures.join('') === searchPicturesInGame.join('')) {
-    goNextLevel(AppRoute.Win);
+    Game.goNextLevel(AppRoute.Win);
 
     return;
   }
 
-  reduceHeartsCount();
-  reducePoints();
+  Game.reduceHeartsCount();
+  Game.reducePoints();
 });

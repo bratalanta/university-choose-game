@@ -12,13 +12,7 @@
     },
     "rules": {
       "import/no-unresolved": "off",
-      "no-loop-func": "off"
-    },
-    "settings": {
-      "import/resolver": {
-        "node": {
-          "paths": ["./"]
-        }
-      }
+      "no-loop-func": "off",
+      "no-underscore-dangle": "off"
     }
 }

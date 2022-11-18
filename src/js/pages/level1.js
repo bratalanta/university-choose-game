@@ -1,12 +1,11 @@
-import {
-  getCurrentUserData, startLevel, reduceHeartsCount, goNextLevel, reducePoints,
-} from './common';
-import { AppRoute, Complexity } from './const';
-import { getShuffledArray } from './functions';
-import Level1Image from '../img/level1/*.png';
+import { AppRoute, Complexity } from '../const';
+import { getShuffledArray } from '../common';
+import Level1Image from '../../img/level1/*.png';
+import Game from '../game';
+import getCurrentUserData from '../store';
 
-startLevel();
-
+Game.startLevel();
+const { complexity } = getCurrentUserData();
 const PicturesCount = {
   [Complexity.Easy]: 8,
   [Complexity.Medium]: 16,
@@ -22,9 +21,6 @@ const SearchNumber = {
   8: 'восемь',
   9: 'девять',
 };
-const {
-  complexity,
-} = getCurrentUserData();
 
 const shuffledNumbers = getShuffledArray(Object.keys(Level1Image));
 const numberToSearch = shuffledNumbers[0];
@@ -39,7 +35,6 @@ const searchNumbersInGame = [];
 const levelHeaderElement = document.querySelector('.header-level-1');
 const numbersListElement = document.querySelector('.numbers-list');
 const checkBtn = document.querySelector('.footer__check');
-
 levelHeaderElement.innerText = `Найди все числа ${SearchNumber[numbersToSearch[0].charAt(0)]}`;
 numbersListElement.classList.add(complexity);
 
@@ -77,11 +72,11 @@ checkBtn.addEventListener('click', () => {
     });
 
   if (chosenNumbers.join('') === searchNumbersInGame.join('')) {
-    goNextLevel(AppRoute.Level2);
+    Game.goNextLevel(AppRoute.Level2);
 
     return;
   }
 
-  reduceHeartsCount();
-  reducePoints();
+  Game.reduceHeartsCount();
+  Game.reducePoints();
 });

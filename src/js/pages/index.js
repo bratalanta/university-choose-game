@@ -1,8 +1,9 @@
 import {
   AppRoute, Complexity, DEFAULT_THEME, StartFeatures, StorageField,
-} from './const';
-import { getCurrentUserData, redirect, setTheme } from './common';
-import ThemeImage from '../img/game/themes/*.jpg';
+} from '../const';
+import getCurrentUserData from '../store';
+import ThemeImage from '../../img/game/themes/*.jpg';
+import { redirect, setTheme } from '../common';
 
 const {
   theme: chosenTheme,

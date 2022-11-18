@@ -1,5 +1,6 @@
-import { getCurrentUserData, redirect, setTheme } from './common';
-import { AppRoute, ComplexityTranslation } from './const';
+import { redirect, setTheme } from '../common';
+import { AppRoute, ComplexityTranslation } from '../const';
+import getCurrentUserData from '../store';
 
 const totalPointsElement = document.querySelector('.content__points-number');
 const downloadBtn = document.querySelector('.download');

@@ -1,7 +1,6 @@
-import {
-  getCurrentUserData, redirect, resetStorage, setTheme,
-} from './common';
-import { AppRoute } from './const';
+import { redirect, setTheme } from '../common';
+import { AppRoute } from '../const';
+import getCurrentUserData, { resetStorage } from '../store';
 
 const {
   points,
