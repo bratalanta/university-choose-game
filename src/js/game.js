@@ -104,6 +104,17 @@ export default class Game {
     const errorPoints = document.querySelector('.error-points__number');
     const backToHomeLink = document.querySelector('.menu__item-link');
     const heartsList = document.querySelector('.hearts');
+    const levelJumpLinks = document.querySelectorAll('.progress-bar__level--link');
+
+    if (levelJumpLinks) {
+      for (const link of levelJumpLinks) {
+        link.addEventListener('click', (evt) => {
+          localStorage.setItem(StorageField.Lvl, link.innerText);
+          localStorage.setItem(StorageField.TimeLeft, '');
+          redirect(evt, `/${evt.target.href}`);
+        });
+      }
+    }
 
     for (let i = 0; i < StartFeatures.HeartsCount - heartsCount; i += 1) {
       if (heartsCount === StartFeatures.HeartsCount) {

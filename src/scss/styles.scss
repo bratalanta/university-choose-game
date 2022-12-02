@@ -81,6 +81,72 @@ body {
     position: relative;
 }
 
+.main {
+  &__aside-progress {
+    position: absolute;
+    top: 0;
+    right: -100px;
+  }
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 33.333%;
+  justify-content: space-between;
+  align-items: center;
+  height: 300px;
+  width: 50px;
+  position: relative;
+
+  &__line {
+    position: absolute;
+    z-index: 1;
+    background-color: gold;
+    width: 5px;
+    left: 48%;
+
+    &--second {
+      height: 150px;
+    }
+
+    &--third {
+      height: 300px;
+    }
+  }
+
+  &::before {
+    z-index: -1;
+    position: absolute;
+    content: "";
+    height: 300px;
+    width: 5px;
+    left: 48%;
+    background-color: #d2d2d2;
+  }
+
+  & a {
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
+  &__level {
+    padding: 20px;
+    border-radius: 50%;
+    z-index: 2;
+
+    font-size: 32px;
+    color: inherit;
+    background-color: purple;
+    border: 5px solid #d2d2d2;
+
+    &.progress-bar__level--active {
+      border-color: gold;
+      box-shadow: rgb(230, 255, 0) 0px 54px 55px, rgb(230, 255, 0) 0px -12px 30px, rgb(230, 255, 0) 0px 4px 6px, rgb(230, 255, 0) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;    }
+  }
+}
+
 @import './pages/index.scss';
 @import './pages/rules.scss';
 @import './pages/level1.scss';
