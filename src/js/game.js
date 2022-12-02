@@ -132,6 +132,7 @@ export default class Game {
 
     window.addEventListener('load', () => this._launchTimer());
     backToHomeLink.addEventListener('click', (evt) => redirect(evt, AppRoute.Home));
+
     setTheme(theme);
   }
 
