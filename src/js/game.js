@@ -111,7 +111,7 @@ export default class Game {
         link.addEventListener('click', (evt) => {
           localStorage.setItem(StorageField.Lvl, link.innerText);
           localStorage.setItem(StorageField.TimeLeft, '');
-          redirect(evt, `/${evt.target.href}`);
+          redirect(evt, `/${evt.target.href.split('/').at(-1)}`);
         });
       }
     }
