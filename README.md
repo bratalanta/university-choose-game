@@ -2,6 +2,12 @@
 
 Проект выложен на [Vercel](https://university-choose-game.vercel.app/index.html)
 
+# Инструкция по запуску проекта
+
+```npm install```
+
+```npm run dev```
+
 ## Дополнительно
 
 Идея и релизация проекта полностью выполнены самостоятельно
